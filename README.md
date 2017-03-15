@@ -11,7 +11,7 @@
 - Event Listener / Event Binding
 - Turbolinks
 
-##Instructions
+## Instructions
 
 This lab does not have a database! Just clone, bundle, and run `rails server`. Then launch the home page ("/") in your browser.
 
