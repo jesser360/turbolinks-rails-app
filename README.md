@@ -52,7 +52,7 @@ The counter should increase for every individual page view.  Can you fix the cur
 #### Challenge 3: Be More Specific
 **Page Specific CSS**: Can you think of a way to get the desired "Color Changer" behavior (from Challenge #1), without using _any_ javascript? (For this challenge you should only modify `application.html` and any `css` files).
 
-<details><summary>Hint: Namespace your CSS to only apply to certain pages (Click Here)</summary>
+<details><summary>Hint: Namespace your CSS to only apply to certain pages.</summary>
 
 Identify the current page using an html `class` attribute, an `erb` tag, and the name of the current controller:
 ```html
@@ -75,7 +75,7 @@ body.controller_name.method_name p {
 ```
 </details>
 
-
+<br>
 **Page Specific JS**: Create a pop-up that says "Welcome!" whenever a user lands on `/goldenrod` for the first time (but _not_ when they click through).
 
 #### Bonus
