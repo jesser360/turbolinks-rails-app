@@ -25,9 +25,8 @@ When you click on a color page, your background color should change to match the
 - Does it work when you click through to the page?
 - Is your solution DRY?
 
-<details>
-<summary>**Hint**: How would you grab the _path_ for the current page from the URL bar? (Click Here)</summary>
-<br>
+<details><summary>Hint: How would you grab the _path_ for the current page from the URL bar? (Click Here)</summary>
+
 ```js
 window.location.pathname
 // or, just
@@ -35,9 +34,8 @@ location.pathname
 ```
 </details>
 
-<details>
-<summary>**Hint**: How would you grab the _color_ for the current page from the path? (Click Here)</summary>
-<br>
+<details><summary>Hint: How would you grab the _color_ for the current page from the path? (Click Here)</summary>
+
 ```js
 location.pathname.split("/")[1]; // warning: returns "" if path is "/"!
 ```
@@ -54,9 +52,8 @@ The counter should increase for every individual page view.  Can you fix the cur
 #### Challenge 3: Be More Specific
 **Page Specific CSS**: Can you think of a way to get the desired "Color Changer" behavior (from Challenge #1), without using _any_ javascript? (For this challenge you should only modify `application.html` and any `css` files).
 
-<details>
-<summary>**Hint**: Namespace your CSS to only apply to certain pages (Click Here)</summary>
-<br/>
+<details><summary>Hint: Namespace your CSS to only apply to certain pages (Click Here)</summary>
+
 Identify the current page using an html `class` attribute, an `erb` tag, and the name of the current controller:
 ```html
 <!-- app/views/layouts/application.html.erb -->
@@ -82,11 +79,10 @@ body.controller_name.method_name p {
 **Page Specific JS**: Create a pop-up that says "Welcome!" whenever a user lands on `/goldenrod` for the first time (but _not_ when they click through).
 
 #### Bonus
-**Remember Your Visitors**: Rememeber that a visitor has already been welcomed, and do not welcome them again!
+**Remember Your Visitors**: Remember that a visitor has already been welcomed, and do not welcome them again!
 
-<details>
-<summary>**Hint**: Hmm, how would you remember that on the front-end? (Click Here)</summary>
-<br>
+<details><summary>Hint: Hmm, how would you remember that on the front-end? (Click Here)</summary>
+
 Use a [cookie](http://letmegooglethat.com/?q=set+cookie+javascript+-w3schools), or [localstorage](https://developer.mozilla.org/en-US/docs/Web/API/Storage/LocalStorage)!
 </details>
 
