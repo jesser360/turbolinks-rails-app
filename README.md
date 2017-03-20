@@ -19,13 +19,16 @@ You should work exclusively in your javascript directory: `app/assets/javascript
 
 #### Challenge 1: Color Changer
 
-When you click on a color page, your background color should change to match the name of the color in your url path. Can you fix the current javascript? (Your homepage should _not_ be teal!)
+When you click on a color page, your background color should change to match the name of the color in your url path. Each file has some JavaScript that should do this update when the page loads, but because of Turbolinks, our pages never load! Can you fix the current javascript? (Your homepage should _not_ be teal!)
 
+In order to fix this problem, you'll need to understand Turbolinks. In particular, you may wish to read [this documentation](https://github.com/turbolinks/turbolinks#building-your-turbolinks-application) on the way that Turbolinks handles page loads & refreshes.
+
+Once you have your initial solution working, consider:
 - Does it work on refresh?
 - Does it work when you click through to the page?
 - Is your solution DRY?
 
-<details><summary>Hint: How would you grab the _path_ for the current page from the URL bar? (Click Here)</summary>
+<details><summary>Hint: How would you grab the path for the current page from the URL bar? (Click Here)</summary>
 
 ```js
 window.location.pathname
@@ -34,7 +37,7 @@ location.pathname
 ```
 </details>
 
-<details><summary>Hint: How would you grab the _color_ for the current page from the path? (Click Here)</summary>
+<details><summary>Hint: How would you grab the color for the current page from the path? (Click Here)</summary>
 
 ```js
 location.pathname.split("/")[1]; // warning: returns "" if path is "/"!
@@ -43,10 +46,11 @@ location.pathname.split("/")[1]; // warning: returns "" if path is "/"!
 
 #### Challenge 2: Page View Counter
 
-The counter should increase for every individual page view.  Can you fix the current javascript?
+The counter should increase for every individual page view, but (surprise) it's also broken because it doesn't correctly handle Turbolinks. Can you fix the current JavaScript?
 
 - Do all the numbers reset when you refresh? (good!)
 - Do specific numbers increment on each pageview?
+- Do all the numbers show up on every page you visit?
 - Is your solution DRY?
 
 #### Challenge 3: Be More Specific
@@ -54,7 +58,7 @@ The counter should increase for every individual page view.  Can you fix the cur
 
 <details><summary>Hint: Namespace your CSS to only apply to certain pages.</summary>
 
-Identify the current page using an html `class` attribute, an `erb` tag, and the name of the current controller:
+Identify the current page by giving the body a `class` with the name of the current controller & method:
 ```html
 <!-- app/views/layouts/application.html.erb -->
 <body class="<%= page_specific_identifier %>">
@@ -79,8 +83,8 @@ body.controller_name.method_name p {
 
 **Page Specific JS**: Create a pop-up that says "Welcome!" whenever a user lands on `/goldenrod` for the first time (but _not_ when they click through).
 
-#### Bonus
-**Remember Your Visitors**: Remember that a visitor has already been welcomed, and do not welcome them again!
+#### Bonus: Remember Your Visitors
+ Remember that a visitor has already been welcomed, and do not welcome them again!
 
 <details><summary>Hint: Hmm, how would you remember that on the front-end? (Click Here)</summary>
 
