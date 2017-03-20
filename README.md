@@ -73,8 +73,8 @@ body.controller_name.method_name p {
      */
 }
 ```
-
 </details>
+
 
 **Page Specific JS**: Create a pop-up that says "Welcome!" whenever a user lands on `/goldenrod` for the first time (but _not_ when they click through).
 
